@@ -2,6 +2,7 @@
 #include <vector>
 #include <SDL2/SDL.h>
 #include <stdio.h>
+#include <cstdlib>
 //#include <random>
 
 using namespace std;
