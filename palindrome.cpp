@@ -1,40 +1,46 @@
 #include <iostream>
 
+
 using namespace std;
 
-char ingreso (char cadena[20])
+bool espalindrome (char *palabra, int i, int tamanio, int ultimo)
 {
-	
-	cout << "Ingrese palabra" ;
-	cin >> cadena;
-	return cadena[20];
-}
+	//cout << palabra[0]; 
 
-void palindrome (char cadena[])
-{
-	//cout << "enpalin" << cadena[2];
-	//cout << sizeof cadena[0];
-	int i = 0;
-	while (cadena[i] != 0)
+
+	if (tamanio <= 1)
+	{return true;}
+	else if (palabra[i] == palabra[ultimo])
 	{
-		cout << cadena[i];
-		i++;
+		cout << "i" << i << "tam=" << tamanio << "ul" << ultimo << endl;
+		return espalindrome (palabra, i+1, tamanio-2, ultimo-1);
+	}
+	else
+	{
+	return false;}
+}
+	
+
+
+int main ()
+{
+	bool palindrome = false;
+	char palabra[] = {"2525252"};
+	int tamanio = sizeof (palabra) -1;
+	//cout << tamanio;
+	
+	palindrome = espalindrome(palabra, 0, tamanio, tamanio-1);
+	if (palindrome)
+	{
+		cout << "palindrome";
+	}
+	else
+	{
+		cout << "no";
 	}
 	
-}
-
-int main()
-{
-	char cadena[] = "jasdasdasdasdasd";
-	
-	//cadena[20] = ingreso(cadena);
-	//cout << sizeof (cadena);
-	
-	//cout << "en main" << cadena[2];
-	palindrome(cadena);
 	
 	
+	//cout << palabra[0];
 	return 0;
-	
 }
-	
