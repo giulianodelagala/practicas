@@ -29,35 +29,51 @@ int main ()
 {
 	bool palindrome = false;
 	long num;
+	long mayor;
+	int m1, m2;
 	string palabra; 
 	for (int i = 999; i > 10; i--)
 	{
 		for (int j = 999; j > 10; j--)
 		{
-			num = i * j;
-			//cout << num;
-			ostringstream convert;   // stream used for the conversion
-			convert << num;      // insert the textual representation of 'Number' in the characters in the stream
-			palabra = convert.str();
-			//cout << palabra;
-			int tamanio = palabra.length();
-			//cout << tamanio;
-			
-			palindrome = espalindrome(palabra, 0, tamanio, tamanio-1);
-			if (palindrome)
+			if (i ==999)
 			{
-				cout << i << " x " << j << "= ";
-				cout << num << " es palindrome";
-				break;
+				num = i*j;
+				mayor = num;
+			}
+			else
+			{
+				num = i * j;
+				//cout << num;
+				ostringstream convert;   // stream used for the conversion
+				convert << num;      // insert the textual representation of 'Number' in the characters in the stream
+				palabra = convert.str();
+				//cout << palabra;
+				int tamanio = palabra.length();
+				//cout << tamanio;
+				
+				palindrome = espalindrome(palabra, 0, tamanio, tamanio-1);
+				if (palindrome)
+				{
+					//cout << i << " x " << j << "= ";
+					//cout << num << " es palindrome";
+					if (num > mayor)
+					{
+						mayor = num;
+						m1 = i; m2 = j;
+					}
+					break;
+				}
 			}
 			
 		}
-		if (palindrome)
-		break;
+	
+		//if (palindrome)
+		//break;
 	}
 	
 	
-	
+	cout << m1 << " x " << m2 << "=" << mayor;
 	//cout << palabra[0];
 	return 0;
 }
