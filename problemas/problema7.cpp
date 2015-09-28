@@ -41,29 +41,28 @@ int main ()
 				num = i*j;
 				mayor = num;
 			}
-			else
+	
+			num = i * j;
+			//cout << num;
+			ostringstream convert;   // stream used for the conversion
+			convert << num;      // insert the textual representation of 'Number' in the characters in the stream
+			palabra = convert.str();
+			//cout << palabra;
+			int tamanio = palabra.length();
+			//cout << tamanio;
+			
+			palindrome = espalindrome(palabra, 0, tamanio, tamanio-1);
+			if (palindrome)
 			{
-				num = i * j;
-				//cout << num;
-				ostringstream convert;   // stream used for the conversion
-				convert << num;      // insert the textual representation of 'Number' in the characters in the stream
-				palabra = convert.str();
-				//cout << palabra;
-				int tamanio = palabra.length();
-				//cout << tamanio;
-				
-				palindrome = espalindrome(palabra, 0, tamanio, tamanio-1);
-				if (palindrome)
+				//cout << i << " x " << j << "= ";
+				//cout << num << " es palindrome";
+				if (num > mayor)
 				{
-					//cout << i << " x " << j << "= ";
-					//cout << num << " es palindrome";
-					if (num > mayor)
-					{
-						mayor = num;
-						m1 = i; m2 = j;
-					}
-					break;
+					mayor = num;
+					m1 = i; m2 = j;
 				}
+				break;
+			
 			}
 			
 		}
