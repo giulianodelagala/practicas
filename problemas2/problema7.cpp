@@ -16,5 +16,5 @@ int main()
 
 	cout << (*(matr+2))[2] << endl;// (*(matr+2))[2] es igual a 11 
 
-	cout << *((*matr)+1) << endl;// *((*matr)+1) es igual a 5 
+	cout << *((*matr)+1) << endl;// *((*matr)+1) es igual a 5 FALSA
 }
