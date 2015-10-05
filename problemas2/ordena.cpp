@@ -1,18 +1,22 @@
 #include <iostream>
+#include <cstdlib>
+#include <algorithm>
 
 using namespace std;
 
 void ingreso (int *mat)
 {
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 400000; i++)
 	{
-		cout << "num" << i+1 << " "; cin >> *(mat+i);
+		*(mat+i) = rand() % 100;
 	}
 }
 
+
+
 void imprime (int *mat)
 {
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 400000; i++)
 	{
 		cout << *(mat+i) << " ";
 	}
@@ -21,9 +25,9 @@ void imprime (int *mat)
 void ordena (int *mat)
 {
 	int temp;
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 400000; i++)
 	{
-		for (int j = i+1; j < 10; j++)
+		for (int j = i+1; j < 400000; j++)
 		{
 			if (*(mat+i) > *(mat+j))
 			{
@@ -36,11 +40,18 @@ void ordena (int *mat)
 	
 }
 
+void consort (int *mat)
+{
+	sort(mat, mat + 400000);
+	
+}
+
 int main ()
 {
-	int mat[10];
+	int mat[400000];
 	ingreso (mat);
-	ordena (mat);
+	//ordena (mat);
+	consort (mat);
 	imprime (mat);
 	
 	
