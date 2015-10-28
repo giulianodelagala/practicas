@@ -7,6 +7,11 @@ class Point
 		
 	public:
 		
+		//constructor
+		Point();
+		Point(double x, double y);
+			
+		
 		//getter
 		double getx();		
 		double gety();
