@@ -1,19 +1,14 @@
 //Vector h header file
-
-
-class Point
-{
-	public:
-	double x, y;
-};
+#include "point.h"
 
 class Vector
 {
 	public:
 	
-	Point start, end;
-	double distance();
-	void print();
+		Point start, end;
+		
+		double distance();
+		void print();
 	
 };
 	
