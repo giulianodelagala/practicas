@@ -17,3 +17,21 @@ void Vector::print()
 	cout << "Coor. y final" << end.gety() << endl;
 
 }
+
+Vector::Vector()
+{
+	start.setx(0);
+	start.sety(0);
+	
+	end.setx(0);
+	end.sety(0);
+}
+	
+Vector::Vector(double startx, double starty, double endx, double endy)
+{
+	start.setx(startx);
+	start.sety(starty);
+	
+	end.setx(endx);
+	end.sety(endy);
+}
