@@ -7,9 +7,9 @@ class Car : public Vehicle
 		 const string &myStyle) : Vehicle(myLicense, myYear), 
 		 style(myStyle)
 		 {}
-		const string &getStyle()
-		{
-			return style;
-		}
+		
+		const string getDesc(); //Overriding
+		
+		const string &getStyle();
 		
 }; 
