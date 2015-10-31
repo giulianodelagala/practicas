@@ -1,14 +1,15 @@
-
-
+//#include <string>
 #include "vehicle.h"
 #include "stringify.h"
 
-const string Vehicle::getDesc() const
+const std::string Vehicle::getDesc()
+const
 {
 	return license + "from" + stringify (year);
 }
 
-const string Vehicle::&getLicense () const
+const std::string Vehicle:: getLicense ()
+const
 {
 	return license;
 }

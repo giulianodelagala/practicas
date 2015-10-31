@@ -1,15 +1,18 @@
+#include "vehicle.h"
+#include <string>
+
 class Car : public Vehicle
 {
-	string style;
+	std::string style;
 	
 	public:
-		Car (const string &myLicense, const int myYear,
-		 const string &myStyle) : Vehicle(myLicense, myYear), 
+		Car (const std::string &myLicense, const int myYear,
+		 const std::string &myStyle) : Vehicle(myLicense, myYear), 
 		 style(myStyle)
 		 {}
 		
-		const string getDesc(); //Overriding
+		//const std::string getDesc(); //Overriding
 		
-		const string &getStyle();
+		const std::string getStyle();
 		
 }; 

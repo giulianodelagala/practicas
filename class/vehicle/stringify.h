@@ -1,6 +1,6 @@
 #include <string>
-#include <iostream>
+//#include <iostream>
 #include <sstream>
 
-string stringify (int num);
+std::string stringify (int num);
 

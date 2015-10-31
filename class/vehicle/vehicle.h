@@ -1,17 +1,18 @@
+#include <string>
 
 class Vehicle
 {
 	protected:
-		string license;
+		std::string license;
 		int year;
 	
 	public:
-		Vehicle (const string &myLicense, const int myYear)
+		Vehicle (const std::string &myLicense, const int myYear)
 		: license (myLicense), year (myYear)
 		{}
 		
-		const string getDesc();
-		const string &getLicense ();
-		const int getYear();
+		const std::string getDesc() const;
+		const std::string getLicense () const;
+		const int getYear() const;
 		
 };
