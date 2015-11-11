@@ -5,7 +5,7 @@
 const std::string Vehicle::getDesc()
 const
 {
-	return license + "from" + stringify (year);
+	return license + " del " + stringify (year);
 }
 
 const std::string Vehicle:: getLicense ()
