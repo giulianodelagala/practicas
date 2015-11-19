@@ -110,11 +110,10 @@ Inicio_lista<T>::~Inicio_lista()
 	inicio = 0;
 }
 
-
 template <typename T>
-Inicio_lista<T>::operator+(Inicio_lista<T> b)
+void Inicio_lista<T>::operator+(Inicio_lista<T> b)
 {
-	Nodo <T> *pb = b.inicio *qb = b.inicio;
+	Nodo <T> *pb = b.inicio, *qb = b.inicio;
 	
 	//ubicamos data de b
 	
@@ -123,14 +122,14 @@ Inicio_lista<T>::operator+(Inicio_lista<T> b)
 		qb = pb;
 		pb = pb->next;
 		
-		a.insertar (qb->data);
+		insertar (qb->data);
 	}
 	
 }
 	
 
 template class Inicio_lista <double>;
-template class Inicio_lista <Inicio_lista>;
+//template class Inicio_lista <Inicio_lista>;
 template class Nodo <double>;
 //template class Iterador <double>;
 

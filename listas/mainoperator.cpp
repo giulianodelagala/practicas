@@ -28,6 +28,19 @@ int main()
 	Auxiliar programa;
 	
 	numero1.insertar (5);
+	numero1.insertar (5);
+	numero1.insertar (5);
+	numero1.insertar (5);
+	
+	numero2.insertar (4);
+	numero2.insertar (4);
+	numero2.insertar (4);
+	numero2.insertar (4);
+	
+	numero1 + numero2;
+	
+	numero1.imprimir();
+	
 	
 	
 	/*
