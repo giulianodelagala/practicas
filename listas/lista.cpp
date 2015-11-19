@@ -126,7 +126,23 @@ void Inicio_lista<T>::operator+(Inicio_lista<T> b)
 	}
 	
 }
+
+template <typename T>
+void Inicio_lista<T>::operator-(Inicio_lista<T> b)
+{
+	Nodo <T> *pb = b.inicio, *qb = b.inicio;
 	
+	//ubicamos data de b
+	
+	while (pb != NULL)
+	{
+		qb = pb;
+		pb = pb->next;
+		
+		eliminar (qb->data);
+	}
+	
+}
 
 template class Inicio_lista <double>;
 //template class Inicio_lista <Inicio_lista>;

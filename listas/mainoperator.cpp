@@ -17,6 +17,7 @@ int main()
 {
 	list_double numero1;
 	list_double numero2;
+	list_double numero3;
 	list_double_ptr p;
 	//list_double_iterator x (&numero);
 	
@@ -28,9 +29,9 @@ int main()
 	Auxiliar programa;
 	
 	numero1.insertar (5);
-	numero1.insertar (5);
-	numero1.insertar (5);
-	numero1.insertar (5);
+	numero1.insertar (4);
+	numero1.insertar (3);
+	numero1.insertar (2);
 	
 	numero2.insertar (4);
 	numero2.insertar (4);
@@ -38,6 +39,14 @@ int main()
 	numero2.insertar (4);
 	
 	numero1 + numero2;
+	numero1.imprimir();
+	
+	numero3.insertar (5);
+	numero3.insertar (5);
+	numero3.insertar (5);
+	numero3.insertar (5);
+	
+	numero1 - numero3;
 	
 	numero1.imprimir();
 	

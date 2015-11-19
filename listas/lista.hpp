@@ -44,6 +44,7 @@ class Inicio_lista
 		void imprimir ();
 		bool eliminar (T t);
 		void operator+ (Inicio_lista b);
+		void operator- (Inicio_lista b);
 };
 
 /*
