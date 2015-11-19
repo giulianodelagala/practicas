@@ -1,11 +1,10 @@
-
 //#include "lista.hpp"
 #include "auxiliar.hpp"
 #include <iostream>
 
 
 typedef Inicio_lista <double> list_double;
-//typedef Nodo<double> *list_double_ptr;
+typedef Nodo<double> *list_double_ptr;
 //typedef Iterador <double> list_double_iterator;
 
 typedef Inicio_lista <char *> list_string;
@@ -16,8 +15,9 @@ typedef Nodo<char *> *list_string_ptr;
 
 int main()
 {
-	list_double numero;
-	//list_double_ptr p;
+	list_double numero1;
+	list_double numero2;
+	list_double_ptr p;
 	//list_double_iterator x (&numero);
 	
 	list_string cadena;
@@ -27,6 +27,10 @@ int main()
 	int op=1;
 	Auxiliar programa;
 	
+	numero1.insertar (5);
+	
+	
+	/*
 	while (op != 0)
 	{
 		op = programa.menu();
@@ -68,6 +72,6 @@ int main()
 	
 	} 
 	
+	*/
 	return 0;
 }
- 

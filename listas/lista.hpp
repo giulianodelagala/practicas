@@ -43,6 +43,7 @@ class Inicio_lista
 		bool hallar (T t); 
 		void imprimir ();
 		bool eliminar (T t);
+		Inicio_lista<T> operator+ (Inicio_lista<T> b);
 };
 
 /*
