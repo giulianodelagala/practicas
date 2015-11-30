@@ -11,8 +11,6 @@
 #include "matriz.hpp"
 #include "pantalla.hpp"
 
-//#include <SDL2/SDL.h>
-
 using std::cout;
 using std::endl;
 
